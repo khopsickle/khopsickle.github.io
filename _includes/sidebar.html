@@ -1,0 +1,34 @@
+<aside>
+  <section class="sidebar-section">
+    <h3>About</h3>
+    The quick brown fox jumps over the lazy dog.  Find out <a href="{{ site.baseurl }}/about/">more</a>.
+  </section>
+<!-- {% assign sidebar_menu = site.pages %}
+  {% for test in site.pages %}
+    {% if sidebar == "yes" %}
+      <section class="page-menu">
+        <h3>Categories</h3>
+        <a href="#" class="menu-link">Link</a>
+        <a href="#" class="menu-link">Link</a>
+        <a href="#" class="menu-link">Link</a>
+        <a href="#" class="menu-link">Link</a>
+        <a href="#" class="menu-link">Link</a>
+        <a href="#" class="menu-link">Link</a>
+        <a href="#" class="menu-link">Link</a>
+        <a href="#" class="menu-link">Link</a>
+      </section>
+    {% endif %}
+  {% endfor %} -->
+  <section class="sidebar-section">
+    <h3>Me, Elsewhere</h3>
+    <a href="mailto:{{ site.email }}" title="{{ site.email }}">
+      {% include icons/email.html %}
+    </a>
+
+    {% for link in site.social-links %}
+      <a href="{{ link.url }}" title="{{ link.title }}">
+        {% include icons/{{ link.class }}.html %}
+      </a>
+    {% endfor %}
+  </section>
+</aside>
