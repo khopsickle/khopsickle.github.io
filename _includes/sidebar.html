@@ -21,10 +21,6 @@
   {% endfor %} -->
   <section class="sidebar-section">
     <h3>Me, Elsewhere</h3>
-    <a href="mailto:{{ site.email }}" title="{{ site.email }}">
-      {% include icons/email.html %}
-    </a>
-
     {% for link in site.social-links %}
       <a href="{{ link.url }}" title="{{ link.title }}">
         {% include icons/{{ link.class }}.html %}
