@@ -1,12 +1,13 @@
 ---
 layout: default
 ---
+
 <article>
-    <h1 class="post-title">{{ page.title }}</h1>
-    {{ content }}
-  </article>
+  <h1 class="post-title">{{ page.title }}</h1>
   <div class="meta-info">
-    <time>{{ page.date | date: %-d "%b %Y" }}</time>
-    <span class="cat">{% if page.meta %} • {{ page.meta }}{% endif %}</span>
-    <span class="tag">Tag1, Tag2</span>
+    <time>{{ page.date | date: "%-d %B %Y" }}</time>
+    <span class="cat">{{ page.categories | join ', ' }}</span>
+    <span class="tag">{{ page.tags | join ', ' }}</span>
   </div>
+  {{ content }}
+</article>

@@ -66,14 +66,10 @@ article
   &:not(:last-child)
     border-bottom: 1px dotted $border-color
 
+// post meta
 .meta-info
-  text-align: center
   padding: 5px 0
 
-  &:not(:last-child)
-    margin-bottom: 50px
-
-// Post meta info
 %meta-style
   +font-size(12px)
   text-transform: uppercase
@@ -84,6 +80,10 @@ time
 
 .cat, .tag
   @extend %meta-style
+
+// Blog List
+.post-meta
+  margin-left: $padding-unit / 2
 
 // Form
 // ----------------------------------------------
