@@ -1,0 +1,27 @@
+---
+layout: page
+title: Contact
+permalink: /contact/
+menu: main
+weight: 4
+---
+<h2>Send me an email!</h2>
+<form action="https://getsimpleform.com/messages?form_api_token=c1afdecf611f404f5933fc0694017fac" method="post">
+  <!-- all your input fields here.... -->
+  <label for="name">Your Name</label>
+    <input id="name" name="name" type="text" required="">
+  <label for="email">Your Email</label>
+    <input id="email" name="email" type="email" required="">
+  <label for="msg">Your Message</label>
+    <textarea id="msg" name="msg" rows="10"></textarea>
+  <input id="send" type="submit" value="Send">
+</form>
+
+<h2>Or find me on:</h2>
+  {% for link in site.social-links %}
+    <p>
+      <a href="{{ link.url }}" class="icon-link" title="{{ link.title }}">
+        {% include icons/{{ link.class }}.html %} {{ link.title }}
+      </a>
+    </p>
+  {% endfor %}
