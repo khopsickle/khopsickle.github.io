@@ -72,17 +72,32 @@ article
 .meta-info
   padding: 5px 0
 
-%meta-style
+.tag
   +font-size(12px)
   text-transform: uppercase
 
 time
-  @extend %meta-style
+  @extend .tag
   font-weight: 600
 
-.cat, .tag
-  @extend %meta-style
+.cat
+  @extend .tag
+  float: right
 
+// list of posts in blog.html
+.list-item
+  display: inline-block
+
+.list-time
+  float: right
+  line-height: 28px
+  color: $text-color
+  font-weight: 400
+
+.list-blurb
+  padding: 0 $padding-unit / 2
+  &:not(:last-child)
+    margin-bottom: $padding-unit / 2
 // Form
 // ----------------------------------------------
 form

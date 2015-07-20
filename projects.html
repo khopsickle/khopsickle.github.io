@@ -1,0 +1,9 @@
+---
+layout: blogpage
+title: Projects
+permalink: blog/projects/
+---
+<h1>{{ page.title }}</h1>
+{% for post in site.categories.projects %}
+  {% include post-list.html %}
+{% endfor %}
