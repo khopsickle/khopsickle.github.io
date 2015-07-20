@@ -3,75 +3,6 @@
  * 1. Base
  *
  * --------------------------------------------- */
-// Bg colors
-$bg-light: #fff
-$bg-medium: #E7E7E7
-
-$module-bg: #FAFAFA
-
-// Text colors
-$text-color: #262c3a // dark blue
-
-$link-color: #517398 // med blue
-
-$white: #fff
-
-$accent: #ff606e // salmon
-$accent2: #38b7ea // light blue
-
-// Widths
-$max-width: 910px
-$media-max-width: 730px
-
-// Other
-$padding-unit: 30px
-$border-color: #D0D0D0
-
-// Mixins
-// ----------------------------------------------
-// Fonts
-=font-size($size)
-  font-size: $size
-  line-height: 1.4em
-
-// Flexbox
-=flexbox()
-  display: -webkit-box
-  display: -moz-box
-  display: -ms-flexbox
-  display: -webkit-flex
-  display: flex
-
-=flex-grow($value)
-  -webkit-flex-grow: $value
-  -ms-flex-grow: $value
-  flex-grow: $value
-
-=flex-direction($value)
-  -webkit-flex-direction: $value
-  -ms-flex-direction: $value
-  flex-direction: $value
-
-=align-self($value)
-  -webkit-align-self: $value
-  -ms-align-self: $value
-  align-self: $value
-
-=justify-content($value)
-  -webkit-justify-content: $value
-  -ms-justify-content: $value
-  justify-content: $value
-
-// Transition
-=transition($type, $time, $etc)
-  -webkit-transition: $type $time $etc
-  -ms-transition: $type $time $etc
-  transition: $type $time $etc
-
-// Wordwrap
-=word-wrap()
-  word-break: break-word
-
 // Global
 // ----------------------------------------------
 *
@@ -108,6 +39,10 @@ a
 
   &:hover
     color: $accent
+
+ul
+  padding: 0
+  padding-left: 25px
 
 img
   width: 100%
