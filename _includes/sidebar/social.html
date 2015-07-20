@@ -1,0 +1,8 @@
+<section class="sidebar-section">
+  <h3>Me, Elsewhere</h3>
+  {% for link in site.social-links %}
+    <a href="{{ link.url }}" title="{{ link.title }}">
+      {% include icons/{{ link.class }}.html %}
+    </a>
+  {% endfor %}
+</section>
