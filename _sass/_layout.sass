@@ -1,15 +1,18 @@
 /* Layout */
-section, #bot
-  border-bottom: 1px solid $font-color
-  padding: $spacer * 3
+section:not(:last-of-type)
+  border-bottom: 1px solid $rgba
 
-.content
+section
+  padding: $spacer * 3
   max-width: $content-width
   margin: 0 auto
 
 #top, #bot
   text-align: center
   background-color: $banner-color
+
+#bot
+  padding: $spacer * 3
 
 #hero
   text-align: center
