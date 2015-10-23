@@ -24,7 +24,7 @@ body
   font-size: 16px
   line-height: 1.4em
 
-p
+p:not(:last-of-type)
   margin-bottom: $spacer * 2
 
 a
@@ -37,7 +37,7 @@ a:hover
   text-align: center
   text-transform: uppercase
   line-height: 1em
-  padding-top: $spacer * 1.5
+  padding-top: $spacer
   padding-bottom: $spacer
 
 h1
@@ -64,10 +64,10 @@ h5
   @extend h4
   font-weight: 300
 
-nav ul
+nav ul, .social ul
   padding: 0
   margin: 0
 
-nav li
+nav li, .social li
   display: inline-block
   margin: ($spacer * 2) ($spacer / 2)
