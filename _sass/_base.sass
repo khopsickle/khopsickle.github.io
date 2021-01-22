@@ -1,21 +1,14 @@
 /* Base */
 
-$font-color: #666 // grey
-$hover-color: #999
-$accent-color: #61CDF5 // light blue
-$bg-color: #F2F1ED // cream
-$banner-color: #222
-$rgba: rgba(0,0,0,.2)
+$bg-color: #001315 // midnight green
+$font-color: #aac2c6 // light grey-teal
+// $hover-color: #999
+$shadow-color: #004953 // dark green
+$highlight-color: #ececec // light grey
+$accent-color: #f7e7ce // cream
 $font-family: 'Open Sans'
-
 $spacer: 0.5em
-
 $content-width: 70%
-
-*
-  -moz-box-sizing: border-box
-  -webkit-box-sizing: border-box
-  box-sizing: border-box
 
 body
   background-color: $bg-color
@@ -28,12 +21,14 @@ p:not(:last-of-type)
   margin-bottom: $spacer * 2
 
 a
-  color: $accent-color
+  color: $highlight-color
 
 a:hover
-  color: $hover-color
+  color: $shadow-color
 
 %hfont
+  text-shadow: 0 0 2px $highlight-color
+  box-shadow: 0 3px 2px -2px $shadow-color;
   text-align: center
   text-transform: uppercase
   line-height: 1em
@@ -44,7 +39,7 @@ h1
   @extend %hfont
   font-size: 2.5em
   font-weight: 600
-  color: $accent-color
+  color: $highlight-color
 
 h2
   @extend %hfont
