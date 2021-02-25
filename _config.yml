@@ -13,9 +13,12 @@ social-links:
  - title: LinkedIn
    url: https://www.linkedin.com/in/catherinekwak
    class: linkedin
- - title: Twitter
-   url: https://twitter.com/khopsickle
-   class: twitter
+ - title: Medium
+   url: https://medium.com/@khopsickle
+   class: medium
+ - title: Codepen
+   url: https://codepen.io/khopsickle
+   class: codepen
 
 # Build settings
 markdown: kramdown

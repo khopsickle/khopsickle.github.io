@@ -1,6 +1,5 @@
 ---
-permalink: /404.html
-layout: default
+layout: 404
 ---
 
-404
+Hey, that page you're looking for doesn't exist. Try going back to the [home page]({{ site.url }}).

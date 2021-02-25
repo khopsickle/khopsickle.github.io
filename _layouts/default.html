@@ -4,16 +4,11 @@
   {% include head.html %}
 
   <body>
-
-    <div class="wrapper">
-      <div class="content">
-        {% include intro.html %}
-        {% include exp.html %}
-        {% include tech.html %}
-        {% include contact.html %}
-      </div>
-    </div>
-
+    {% include menu.html %}
+    <div id="top">{% include top.html %}</div>
+    <!-- <div id="work">{% include work.html %}</div> -->
+    <div id="skills">{% include skills.html %}</div>
+    <div id="contact">{% include contact.html %}</div>
   </body>
 
 </html>

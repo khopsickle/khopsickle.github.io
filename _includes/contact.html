@@ -1,2 +1,19 @@
-<h2>Say Hello</h2>
-GH LI IG CP
+<div class="divider"></div>
+<div class="content flex-heading top-margin">
+  <h2>Say Hello</h2>
+  <a class="heading-social" href="{{ site.social-links[0].url }}">Email»</a>
+</div>
+<div class="divider"></div>
+<div class="content top-margin bottom-margin">
+  <ul class="social">
+    {% for link in site.social-links %}
+      <a href="{{ link.url }}">
+        <li>
+          <span class="icon">
+            {% include icons/{{ link.class }}.svg %}
+          </span>
+        </li>
+      </a>
+    {% endfor %}
+  </ul>
+</div>
