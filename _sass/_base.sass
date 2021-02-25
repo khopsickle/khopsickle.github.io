@@ -2,7 +2,6 @@
 
 $bg-color: #001315 // midnight green
 $font-color: #aac2c6 // light grey-teal
-// $hover-color: #999
 $shadow-color: #004953 // dark green
 $highlight-color: #ececec // light grey
 $accent-color: #f7e7ce // cream
@@ -17,9 +16,6 @@ body
   font-size: 14px
   line-height: 1.4em
 
-// p:not(:last-of-type)
-//   margin-bottom: $spacer * 2
-
 a
   color: $highlight-color
   text-decoration: none
@@ -28,37 +24,16 @@ a:hover
   color: $shadow-color
   text-decoration: overline $highlight-color
 
-%hfont
+@mixin hfont
   text-shadow: 0 0 2px $highlight-color
   line-height: 1.2em
 
-h1 // page titles
-  @extend %hfont
+h1
+  @include hfont
   color: $highlight-color
   font-size: 3em
   opacity: 85%
 
 h2
-  @extend %hfont
+  @include hfont
   font-size: 1.5em
-
-// h3
-//   @extend h2
-//   font-weight: 300
-
-// h4
-//   @extend %hfont
-//   font-weight: 600
-//   font-size: 1em
-
-// h5
-//   @extend h4
-//   font-weight: 300
-
-// nav ul, .social ul
-//   padding: 0
-//   margin: 0
-
-// nav li, .social li
-//   display: inline-block
-//   margin: ($spacer * 2) ($spacer / 2)
