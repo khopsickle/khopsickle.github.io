@@ -3,6 +3,7 @@
 .content
   margin: 0 auto
   width: $content-width
+  align-self: center
 
 .top-margin
   margin-top: $spacer * 4
@@ -12,16 +13,18 @@
 
 
 //  Module
+.top 
+  display: flex
+  height: 65vh
+
 .blurb
   width: 65%
 
 .contact
-  color: $accent-color
   font-weight: 600
 
 .tagline
   font-size: 2em
-  opacity: 65%
   line-height: 1.2em
   color: $highlight-color
 
@@ -29,6 +32,7 @@
   margin: 0
   margin-top: 1px solid $highlight-color
   list-style-type: none
+  padding: 0
 
   li
     display: inline-block
