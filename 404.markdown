@@ -1,5 +1,0 @@
----
-layout: 404
----
-
-Hey, that page you're looking for doesn't exist. Try going back to the [home page]({{ site.url }}).
