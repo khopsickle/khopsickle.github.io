@@ -1,0 +1,9 @@
+# Ignore build output
+dist
+
+# Node modules
+node_modules
+
+# Optional: log files or OS files
+*.log
+.DS_Store

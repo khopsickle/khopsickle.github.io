@@ -1,0 +1,10 @@
+# Ignore build output
+dist
+
+# Node modules
+node_modules
+
+# Optional: ignore config files you don’t want Prettier to touch
+*.config.cjs
+*.lock
+*.json
