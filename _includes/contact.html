@@ -1,0 +1,11 @@
+<ul class="social">
+  {% for link in site.social-links %}
+    <a href="{{ link.url }}">
+      <li>
+        <span class="icon">
+          {% include icons/{{ link.class }}.svg %}
+        </span>
+      </li>
+    </a>
+  {% endfor %}
+</ul>
