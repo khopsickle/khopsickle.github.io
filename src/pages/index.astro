@@ -1,5 +1,8 @@
 ---
 import "./styles/global.css";
+import posts from '../data/posts.json';
+
+const firstPost = posts.length > 0 ? posts[0] : null;
 ---
 
 <html lang="en">
@@ -13,5 +16,6 @@ import "./styles/global.css";
 	</head>
 	<body>
 		<h1>Astro</h1>
+        <p>Under construction! {firstPost.title}</p>
 	</body>
 </html>
