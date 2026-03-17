@@ -1,42 +1,28 @@
-name: Build & Deploy GH Page
-
-on:
-  push:
-    branches:
-      - main
-      - astro-redesign
-  schedule:
-    - cron: "0 3 * * 0" # every Sunday at 03:00 UTC
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: 22
-          cache: "npm"
+          node-version: 24
+      - run: npm ci
+      - run: node scripts/fetch-medium.js
+      - run: npm run build
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Deploy main branch
+        if: github.ref_name == 'main'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          commit_message: "Deploy main branch"
 
-      - name: Fetch Medium posts
-        env:
-          GH_USERNAME: ${{ github.repository_owner }}
-        run: node scripts/fetch-medium.js
-
-      - name: Build Astro site
-        run: npm run build
-
-      - name: Deploy to GitHub Pages
+      - name: Deploy astro-redesign branch
+        if: github.ref_name == 'astro-redesign'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           destination_dir: astro-redesign
-          commit_message: "Deploy Astro portfolio"
+          commit_message: "Deploy astro-redesign branch"
